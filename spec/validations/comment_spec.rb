@@ -13,7 +13,7 @@ describe Comment do
   describe 'method:' do
     it 'increment_comment_counter' do
       Comment.create(author: author1, post: post1, text: 'Hi')
-      
+
       expect(post1.comments_counter).to eq(1)
     end
   end

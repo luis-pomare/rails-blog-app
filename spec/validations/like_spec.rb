@@ -13,7 +13,7 @@ describe Like do
   describe 'method:' do
     it 'increment_likes_counter' do
       Like.create(author: author1, post: post1)
-      
+
       expect(post1.likes_counter).to eq(1)
     end
   end

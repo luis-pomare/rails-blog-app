@@ -45,7 +45,7 @@ describe Post do
     it 'increment_post_counter' do
       author2 = FactoryBot.create(:user, name: 'Author 2', photo: 'http/foto.com', bio: 'bio', post_counter: 0)
       Post.create(title: 'post_2', author: author2, comments_counter: 0, likes_counter: 0)
-      
+
       expect(author2.post_counter).to eq(1)
     end
   end
