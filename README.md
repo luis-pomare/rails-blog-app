@@ -30,7 +30,7 @@
 
 # 📖 Blog app <a name="about-project"></a>
 
-**Blog app** is a single yet full functional web app develop in ruby on rails. It allows the users create posts, leave comments about those posts, and recieve likes.
+**Blog app** is a single yet full functional web app develop in ruby on rails. It allows the users create posts, leave comments about those posts, and give and recieve likes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,9 +54,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **Name convention over configuration**
+- **Name convention, over configuration**
 - **ROR**
 - **Linters usage**
 
@@ -121,12 +119,6 @@ To run tests, run the following command:
 ```sh
   rspec spec/
 ```
-
-### Run tests
-
-To run tests, run the following command:
-
-> Coming soon
 
 <!--
 Example command:
