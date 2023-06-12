@@ -11,7 +11,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should render users/index view' do
-      expect(response).to render_template("users/index")
+      expect(response).to render_template('users/index')
     end
 
     it 'should include the placeholder text' do
