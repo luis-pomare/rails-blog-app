@@ -5,7 +5,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    @last_posts = @user.last_posts
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
