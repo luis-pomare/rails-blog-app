@@ -1,1 +1,6 @@
 //= require user_index
+
+body {
+  padding: 0 10% 0 10%;
+}
+
