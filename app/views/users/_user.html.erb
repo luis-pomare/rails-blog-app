@@ -3,9 +3,9 @@
     <%= link_to(image_tag(user.photo, width: 150, height: 150, alt: 'img'), user_path(user), class: "col-md-3 p-3") %>
   </figure>
 
-  <div class = user_index_description>
-    <h3><%= user.name %></h3>
-    <p>
+  <div class = "user_index_description">
+    <h3 class = "user_index_name"><%= user.name %></h3>
+    <p class = "user_index_number_of_posts">
       <strong>Number of posts:</strong>
       <%= user.post_counter %>
     </p>
