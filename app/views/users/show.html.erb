@@ -2,6 +2,11 @@
 
 <%= render @user %>
 
+<section class = "user_show_bio">
+  <h2>Bio</h2>
+  <p><%= @user.bio %></p>
+</section>
+
 <div>
   <%= link_to "Back to users", users_path %>
 </div>
