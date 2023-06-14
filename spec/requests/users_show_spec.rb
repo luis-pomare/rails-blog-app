@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'Users/show', type: :request do
   describe 'GET /users/:user_id' do
-    let!(:user) { User.create(name: 'Ariel', post_counter: 0) }
-
+    
     before :each do
-      get user_path(:user)
+      user = User.create(name: 'Ariel', post_counter: 0)
+      get user_path(user)
     end
 
     it 'should have a http status of 200(correct status)' do
@@ -17,7 +17,7 @@ RSpec.describe 'Users/show', type: :request do
     end
 
     it 'should include the placeholder text' do
-      expect(response.body).to include('Users show')
+      expect(response.body).to include('Bio')
     end
   end
 end
