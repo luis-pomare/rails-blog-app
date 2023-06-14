@@ -3,11 +3,13 @@
 }
 
 .user_show_last_post_container {
-  padding: 7px;
+  padding: 10px 20px;
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .user_show_last_post_container:hover {
@@ -17,5 +19,11 @@
 
 .user_show_last_post_title {
   margin: 0;
+}
+
+.user_show_last_post_counters {
+  align-self: flex-end;
+  margin: 0;
+  font-size: 12px;
 }
 
