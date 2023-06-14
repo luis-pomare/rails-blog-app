@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_user, only: %i[ index ]
-  def index; end
+  def index
+    @posts = Post.where(author: @user)
+  end
 
   def show; end
 

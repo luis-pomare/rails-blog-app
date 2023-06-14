@@ -4,5 +4,5 @@
   <p class = "user_show_last_post_counters">
     comments: <%= post.comments_counter%> likes: <%= post.likes_counter %>
   </p>
-  <%= link_to "Show this post", user_post_path(user) %>
+  <%= link_to "Show this post", user_post_url(user, post) %>
 </div> 
