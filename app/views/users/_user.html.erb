@@ -1,6 +1,6 @@
 <div id="<%= dom_id user %>" class="user_index_container">
   <figure>
-    <%= link_to(image_tag(user.photo, width: 120, height: 120, alt: 'img'), user_path(user), class: "col-md-3 p-3") %>
+    <%= link_to(image_tag(user.photo, width: 120, height: 120, alt: 'img'), user_path(user)) %>
   </figure>
 
   <div class = "user_index_description">
