@@ -1,5 +1,5 @@
 <%= render partial: '_partials/user', locals: { user: @user }%>
 
 <% @posts.each do |post| %>
-  <p><%= post.title %></p>
+  <%= render partial: '_partials/post_preview', locals: { user: @user, post:post }%>
 <% end %>
