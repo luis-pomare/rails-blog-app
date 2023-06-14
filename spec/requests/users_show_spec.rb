@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'Users/show', type: :request do
   describe 'GET /users/:user_id' do
-    let!(:user) { User.create(name: 'Ariel', post_counter: 0) }
+    let!(:user) { User.create!(name: 'Ariel', post_counter: 0) }
     
     it 'should have a http status of 200(correct status)' do
-      get '/users'
+      get '/users/1'
       expect(response).to have_http_status(200)
     end
 
