@@ -4,6 +4,6 @@
 
 <div id="users">
   <% @users.each do |user| %>
-    <%= render user %>
+    <%= render partial: '_partials/user', locals: { user: user }%>
   <% end %>
 </div>
