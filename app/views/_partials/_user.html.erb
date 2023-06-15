@@ -1,0 +1,12 @@
+<div id="<%= dom_id user %>" class="user_index_container">
+  <% avatar_image = "<img src='#{user.photo}' alt='User avatar'>".html_safe %>
+  <%= link_to(avatar_image, user_path(user)) %>
+
+  <div class = "user_index_description">
+    <h3 class = "user_index_name"><%= user.name %></h3>
+    <p class = "user_index_number_of_posts">
+      <strong>Number of posts:</strong>
+      <%= user.post_counter %>
+    </p>
+  </div>
+</div>

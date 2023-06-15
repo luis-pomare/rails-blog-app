@@ -1,1 +1,7 @@
-<h1>Post show</h1>
+<%= render partial: '_partials/post', locals: { user: @user, post:@post }%>
+
+<% @comments.each do |comment| %>    
+  <%= render partial: '_partials/comment', locals: { comment: comment }%>
+<% end %>
+
+<%= link_to "Back to users", users_path %>

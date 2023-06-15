@@ -1,1 +1,17 @@
-<h1>Users show</h1>
+<%= render partial: '_partials/user', locals: { user: @user }%>
+
+<section class = "user_show_bio">
+  <h2>Bio</h2>
+  <p><%= @user.bio %></p>
+</section>
+
+<div id="user_show_last_posts">
+  <% @last_posts.each do |post| %>
+    <%= render partial: '_partials/post_preview', locals: { user: @user, post:post }%>
+  <% end %>
+</div>
+
+<div class="user_show_bottom_links">
+  <%= link_to "Back to users", users_path %>
+  <%= link_to "See all posts", user_posts_path(@user) %>
+</div>

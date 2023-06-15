@@ -1,0 +1,8 @@
+<div class='user_show_last_post_container'>
+  <h2 class = 'user_show_last_post_title'><%=  post.title %></h2>
+  <p class = "user_show_last_post_text"><%= post.text.slice(0..50) %>...</p>
+  <p class = "user_show_last_post_counters">
+    comments: <%= post.comments_counter%> likes: <%= post.likes_counter %>
+  </p>
+  <%= link_to "Show this post", user_post_url(user, post) %>
+</div> 
