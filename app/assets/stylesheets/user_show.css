@@ -1,5 +1,8 @@
 .user_show_bio {
   font-family: 'Courier New', Courier, monospace;
+  border: 2px solid #000;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .user_show_last_post_container {
@@ -31,3 +34,4 @@
   display: flex;
   justify-content: space-evenly;
 }
+
