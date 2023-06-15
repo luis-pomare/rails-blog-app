@@ -1,12 +1,16 @@
 .user_index_container {
   display: grid;
   grid-template-columns: 1fr 5fr;
+  column-gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .user_index_description {
   display: flex;
   justify-content: flex-start;
   padding: 15px;
+  border: 2px solid #000;
 }
 
 .user_index_name {
@@ -18,3 +22,4 @@
   align-self: flex-end;
   margin-left: 25px;
 }
+
