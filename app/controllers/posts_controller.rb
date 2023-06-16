@@ -7,6 +7,10 @@ class PostsController < ApplicationController
     @comments = Comment.where(post: @post)
   end
 
+  def new
+    @new_post = Post.new
+  end
+
   private
 
   def set_user
