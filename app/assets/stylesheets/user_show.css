@@ -33,4 +33,6 @@
 .user_show_bottom_links {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
+
