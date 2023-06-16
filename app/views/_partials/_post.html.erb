@@ -4,4 +4,8 @@
   </p>
   <h2 class = 'user_show_last_post_title'><%=  post.title %></h2>
   <p class = "user_show_last_post_text"><%= post.text %></p>
+  <span class='user_show_bottom_links'>
+    <%= link_to 'Leave a comment', new_user_post_comment_path(@user, @post), class: 'crete_link' %>
+    <%= button_to 'Give it a like', likes_path(user_id: @user.id, post_id: @post.id), method: :post, class: 'crete_link' %>
+  </span>
 </div> 

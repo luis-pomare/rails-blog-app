@@ -12,4 +12,5 @@ img {
 a {
   text-decoration: none;
   color: #1c1870;
+  cursor: pointer;
 }

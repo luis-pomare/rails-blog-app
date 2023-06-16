@@ -1,6 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<header class='user_show_bottom_links'>
+  <h1>Users</h1>
+  <%= link_to('Create a new post', new_user_post_path(@current_user), class: 'crete_link') %>
+</header>
 
-<h1>Users</h1>
 
 <div id="users">
   <% @users.each do |user| %>
