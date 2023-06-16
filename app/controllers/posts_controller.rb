@@ -14,9 +14,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.comments_counter = 0
+    @post.likes_counter = 0
+    @post.author = @current_user
 
     if @post.save
-      redirect_to post_url(@post), notice: "Post was successfully created."
+      redirect_to user_path(@current_user), notice: "Post was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -34,5 +37,9 @@ class PostsController < ApplicationController
 
   def set_post # only show
     @post = Post.find(params[:id])
+  end
+
+  def post_params
+    params.require(:post).permit(:user_id, :title, :text, :comments_counter, :likes_counter)
   end
 end
