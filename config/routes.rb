@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   resources :likes, only: [:create]
-  resources :commetns, only: [:new, :create]
+  resources :comments, only: [:new, :create]
 end
