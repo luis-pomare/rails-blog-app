@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @post.author = @current_user
 
     if @post.save
-      redirect_to user_path(@current_user), notice: "Post was successfully created."
+      redirect_to user_path(@current_user), notice: 'Post was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,15 +27,18 @@ class PostsController < ApplicationController
 
   private
 
-  def set_user # only index and show
+  # only index and show
+  def set_user
     @user = User.find(params[:user_id])
   end
 
-  def set_posts # only index and show
+  # only index and show
+  def set_posts
     @posts = Post.where(author: @user)
   end
 
-  def set_post # only show
+  # only show
+  def set_post
     @post = Post.find(params[:id])
   end
 
