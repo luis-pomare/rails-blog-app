@@ -1,5 +1,7 @@
 <h1>Users</h1>
 
+<%= link_to('Create post', new_user_post_path(@current_user)) %>
+
 <div id="users">
   <% @users.each do |user| %>
     <%= render partial: '_partials/user', locals: { user: user }%>
