@@ -4,20 +4,13 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
-    @comment.author = @current_user
-    @comment.post = Post.find(params[:post_id])
+    @comment = Comment.new(text: params.require(:comment).permit(:text)[:text], author: @current_user,
+                           post: Post.find(params[:post_id]))
 
     if @comment.save
-      redirect_to user_path(@current_user), notice: "comment was successfully created."
+      redirect_to root_path, notice: 'Comment created successfully'
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
-  end
-
-  private
-
-  def comment_params
-    params.require(:comment).permit(:text)
   end
 end
