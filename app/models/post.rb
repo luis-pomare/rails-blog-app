@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  before_validation :set_default_counters
+
   belongs_to :author, class_name: 'User'
   has_many :comments
   has_many :likes
@@ -15,5 +17,12 @@ class Post < ApplicationRecord
 
   def increment_post_counter
     author.increment!(:post_counter)
+  end
+
+  private
+
+  def set_default_counters
+    self.comments_counter = 0
+    self.likes_counter = 0
   end
 end
