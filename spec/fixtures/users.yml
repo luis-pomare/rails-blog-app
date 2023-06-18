@@ -1,9 +1,0 @@
-user1:
-  id: 1
-  created_at: <%= 1.day.ago %>
-  updated_at: <%= 1.day.ago %>
-  name: Ariel
-  photo: https://robohash.org/3
-  bio: 'Teacher from Argentina'
-  post_counter: 0
-
