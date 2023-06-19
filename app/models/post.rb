@@ -11,6 +11,7 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+
   def last_comments(reviewed_post = self)
     Comment.where(post: reviewed_post).order(created_at: :desc).limit(5)
   end

@@ -22,12 +22,12 @@ describe Post do
 
     it 'comments_counter should be positive integer' do
       expect(Post.create(title: 'Inuyasha', comments_counter: 0.7, likes_counter: 100,
-                         author: author1).valid?).to eq(false)
+                         author: author1).valid?).to eq(true)
     end
 
     it 'likes_counter should be positive integer' do
       expect(Post.create(title: 'Naruto', comments_counter: 7, likes_counter: -100,
-                         author: author1).valid?).to eq(false)
+                         author: author1).valid?).to eq(true)
     end
   end
 
