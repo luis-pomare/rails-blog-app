@@ -29,5 +29,13 @@ RSpec.describe 'User', type: :system do
       end
     end
 
+    describe 'testing page links' do
+      it 'should redirect to user#show' do
+        visit users_path
+        expect(page).to have_link(href: user_path(user))
+        expect(page).to have_link(href: user_path(user_two))
+        expect(page).to have_link(href: user_path(user_three))
+      end
+    end
   end
 end
