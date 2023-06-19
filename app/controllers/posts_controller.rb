@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def index; end
 
   def show
-    @comments = Comment.where(post: @post)
+    @comments = Comment.includes(:author).where(post: @post)
   end
 
   def new
