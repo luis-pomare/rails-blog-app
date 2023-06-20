@@ -6,7 +6,6 @@ RSpec.describe 'User', type: :system do
     let!(:user_three) { User.create(name: 'Mathias', photo: 'https://robohash.org/3', bio: 'bio', post_counter: 0) }
     let!(:post) { Post.create(title: 'Ruby on rails', author: user, comments_counter: 0, likes_counter: 0) }
 
-
     describe 'testing page rendering' do
       it 'should render a users names' do
         visit users_path
