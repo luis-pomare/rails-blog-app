@@ -20,7 +20,7 @@ RSpec.describe 'post#index integration test', type: :system do
     visit user_posts_path(user)
     expect(page).to have_css("img[src*='https://robohash.org/1']")
   end
-  
+
   it 'should render the author of the posts' do
     visit user_posts_path(user)
     expect(page).to have_content(user.name)
@@ -53,7 +53,7 @@ RSpec.describe 'post#index integration test', type: :system do
     visit user_posts_path(user)
     expect(page).to have_content("likes: #{post1.likes_counter}")
   end
-  
+
   it 'should have the pagination section if there is more than 3 posts' do
     visit user_posts_path(user)
 

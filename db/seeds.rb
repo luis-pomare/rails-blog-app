@@ -30,6 +30,12 @@ seeded_posts = Post.create([
 ])
 
 seeded_commets = Comment.create([
+  {text: 'Nice', author: seeded_users[0], post: seeded_posts[0]},
+  {text: 'Nice', author: seeded_users[1], post: seeded_posts[0]},
+  {text: 'Nice', author: seeded_users[2], post: seeded_posts[0]},
+  {text: 'Nice', author: seeded_users[3], post: seeded_posts[0]},
+  {text: 'Nice', author: seeded_users[0], post: seeded_posts[0]},
+  {text: 'Nice', author: seeded_users[1], post: seeded_posts[0]},
   {text: 'Nice', author: seeded_users[3], post: seeded_posts[0]},
   {text: 'Oh really?', author: seeded_users[4], post: seeded_posts[1]},
   {text: 'I knew it', author: seeded_users[4], post: seeded_posts[2]}
