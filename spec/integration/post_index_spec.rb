@@ -20,10 +20,12 @@ RSpec.describe 'post#index integration test', type: :system do
     visit user_posts_path(user)
     expect(page).to have_css("img[src*='https://robohash.org/1']")
   end
-  it 'should render the user name' do
+  
+  it 'should render the author of the posts' do
     visit user_posts_path(user)
     expect(page).to have_content(user.name)
   end
+
   it 'should render the number of posts of a user' do
     visit user_posts_path(user)
     expect(page).to have_content("Number of posts: #{user.post_counter}")
