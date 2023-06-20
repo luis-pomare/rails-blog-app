@@ -5,6 +5,15 @@ RSpec.describe 'post#index integration test', type: :system do
   let!(:post1) do
     Post.create(title: 'Ruby on rails', text: 'Hello world', author: user, comments_counter: 0, likes_counter: 0)
   end
+  let!(:post2) do
+    Post.create(title: 'Ruby on rails', text: 'Hello world', author: user, comments_counter: 0, likes_counter: 0)
+  end
+  let!(:post3) do
+    Post.create(title: 'Ruby on rails', text: 'Hello world', author: user, comments_counter: 0, likes_counter: 0)
+  end
+  let!(:post4) do
+    Post.create(title: 'Ruby on rails', text: 'Hello world', author: user, comments_counter: 0, likes_counter: 0)
+  end
   let!(:comment_one) { Comment.create(text: 'Nice', author: user, post: post1) }
 
   it 'should render the user profile picture' do
@@ -41,6 +50,12 @@ RSpec.describe 'post#index integration test', type: :system do
   it 'should render the number of likes of the post' do
     visit user_posts_path(user)
     expect(page).to have_content("likes: #{post1.likes_counter}")
+  end
+  
+  it 'should have the pagination section if there is more than 3 posts' do
+    visit user_posts_path(user)
+
+    expect(page).to have_selector('#pagination')
   end
 
   context 'to click in a post' do
