@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'post#index integration test', type: :system do 
   let!(:user) { User.create(name: 'Ariel', photo: 'https://robohash.org/1', bio: 'bio', post_counter: 0) }
   let!(:post1) { Post.create(title: 'Ruby on rails', text: 'Hello world', author: user, comments_counter: 0, likes_counter: 0) }
+  let!(:comment_one) {Comment.create(text: 'Nice', author: user, post: post1)}
 
   it 'should render the user profile picture' do
     visit user_posts_path(user)
@@ -24,6 +25,13 @@ RSpec.describe 'post#index integration test', type: :system do
     visit user_posts_path(user)
     expect(page).to have_content(post1.text)
   end
+
+  it 'Should render the first comments' do
+    visit user_posts_path(user)
+
+    expect(page).to have_content(comment_one.text)
+  end
+
   it 'should render the number of comments of the post' do
     visit user_posts_path(user)
     expect(page).to have_content("comments: #{post1.comments_counter}")
@@ -39,6 +47,5 @@ RSpec.describe 'post#index integration test', type: :system do
       first(:link, 'Show this post').click
       expect(page).to have_current_path(user_post_path(user, post1))
     end
-
   end
 end
