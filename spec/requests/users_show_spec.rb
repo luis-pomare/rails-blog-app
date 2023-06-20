@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Users/show', type: :request do
   describe 'GET /users/:user_id' do
-    let!(:user) {User.create(name: 'Ariel', photo: 'http/foto.com', bio: 'bio', post_counter: 3)}
+    let!(:user) { User.create(name: 'Ariel', photo: 'http/foto.com', bio: 'bio', post_counter: 3) }
     before :each do
       get user_path(user)
     end

@@ -2,10 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET user_posts_path' do
-    let!(:user) { User.create(name: 'Ariel', post_counter: 0) }
-
+    let!(:user) { User.create(name: 'Ariel', photo: 'http/foto.com', bio: 'bio', post_counter: 3) }
     before :each do
-      get user_posts_path(:user)
+      get user_posts_path(user)
     end
 
     it 'should have a http status of 200(correct status)' do
@@ -17,7 +16,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should include the placeholder text' do
-      expect(response.body).to include('Post index')
+      expect(response.body).to include('Ariel')
     end
   end
 end

@@ -8,4 +8,8 @@
   <% end %>
 <% end %>
 
+<% if @posts.length > 3%>
+  <%= render partial: '_partials/pagination' %>
+<% end %>
+
 <%= link_to "Back to users", users_path %>
