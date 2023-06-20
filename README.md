@@ -154,6 +154,12 @@ Example:
 - Twitter: [@LuisPomare1](https://twitter.com/LuisPomare1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/luis-pomare/)
 
+👤 **David Espino**
+
+- GitHub: [@DavidEspinoG](https://github.com/DavidEspinoG)
+- Twitter: [@LuisPomare1](https://twitter.com/DavidEspinoG)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/davidespinog/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -167,7 +173,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/luis-pomare/blog-app/issues).
+Feel free to check the [issues page](https://github.com/luis-pomare/rails-blog-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
