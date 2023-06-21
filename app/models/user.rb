@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  before_validation :set_default_counters
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -13,5 +14,11 @@ class User < ApplicationRecord
 
   def last_posts(user = self)
     Post.where(author: user).order(created_at: :desc).limit(3)
+  end
+
+  private
+
+  def set_default_counters
+    self.post_counter = 0
   end
 end
