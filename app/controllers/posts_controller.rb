@@ -14,10 +14,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.author = @current_user
+    @post.author = current_user
 
     if @post.save
-      redirect_to user_path(@current_user), notice: 'Post was successfully created.'
+      redirect_to user_path(current_user), notice: 'Post was successfully created.'
     else
       puts @post.errors.full_messages # Add this line to display the validation errors in the console
       render :new, status: :unprocessable_entity
