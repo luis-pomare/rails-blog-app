@@ -5,4 +5,9 @@ class ApiController < ApplicationController
     render json: @posts, status: :ok
   end
 
+  def post_comments
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+    render json: @comments, status: :ok
+  end
 end
