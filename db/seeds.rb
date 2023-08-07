@@ -22,27 +22,27 @@ seeded_users = User.create([
 
 seeded_posts = Post.create([
   {title: 'AI is not our enemy', text: 'From a business perspective, AI is already paying dividends in many areas. These include voice recognition, chatbots, customer services, machine learning, intelligent applications, big data and analytics. But in many ways, thats just the tip of the iceberg.',
-  comments_counter: 0, likes_counter: 0, author: seeded_users[0]},
+  comments_counter: 0, likes_counter: 0, author_id: 1},
   {title: 'GitHub advantages', text: 'Its used for storing, tracking, and collaborating on software projects. It makes it easy for developers to share code files and collaborate with fellow developers on open-source projects. GitHub also serves as a social networking site where developers can openly network, collaborate, and pitch their work.',
-  comments_counter: 0, likes_counter: 0, author: seeded_users[1]},
+  comments_counter: 0, likes_counter: 0, author_id: 2},
   {title: 'Global market state', text: 'The global information technology market grew from $8179.48 billion in 2022 to $8852.41 billion in 2023 at a compound annual growth rate (CAGR) of 8.2%',
-  comments_counter: 0, likes_counter: 0, author: seeded_users[2]}
+  comments_counter: 0, likes_counter: 0, author_id: 3}
 ])
 
 seeded_commets = Comment.create([
-  {text: 'Nice', author: seeded_users[0], post: seeded_posts[0]},
-  {text: 'Nice', author: seeded_users[1], post: seeded_posts[0]},
-  {text: 'Nice', author: seeded_users[2], post: seeded_posts[0]},
-  {text: 'Nice', author: seeded_users[3], post: seeded_posts[0]},
-  {text: 'Nice', author: seeded_users[0], post: seeded_posts[0]},
-  {text: 'Nice', author: seeded_users[1], post: seeded_posts[0]},
-  {text: 'Nice', author: seeded_users[3], post: seeded_posts[0]},
-  {text: 'Oh really?', author: seeded_users[4], post: seeded_posts[1]},
-  {text: 'I knew it', author: seeded_users[4], post: seeded_posts[2]}
+  {text: 'Nice', author_id: 1, post: seeded_posts[0]},
+  {text: 'Nice', author_id: 2, post: seeded_posts[0]},
+  {text: 'Nice', author_id: 3, post: seeded_posts[0]},
+  {text: 'Nice', author_id: 3, post: seeded_posts[0]},
+  {text: 'Nice', author_id: 1, post: seeded_posts[0]},
+  {text: 'Nice', author_id: 2, post: seeded_posts[0]},
+  {text: 'Nice', author_id: 3, post: seeded_posts[0]},
+  {text: 'Oh really?', author_id: 3, post: seeded_posts[1]},
+  {text: 'I knew it', author_id: 3, post: seeded_posts[2]}
 ])
 
 seeded_likes = Like.create([
-  {author: seeded_users[3], post: seeded_posts[0]},
-  {author: seeded_users[3], post: seeded_posts[1]},
-  {author: seeded_users[3], post: seeded_posts[2]}
+  {author_id: 1, post: seeded_posts[0]},
+  {author_id: 1, post: seeded_posts[1]},
+  {author_id: 1, post: seeded_posts[2]}
 ])
